@@ -7,6 +7,7 @@ public class VRSimulator : MonoBehaviour
 
     public GameObject camera1;
     public float turnSpeed;
+    public Gyroscope gyro;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +37,7 @@ public class VRSimulator : MonoBehaviour
 
 #endif
         //rotate up
-        camera1.transform.Rotate(-Input.acceleration.z,0,0);
+        camera1.transform.Rotate(Input.acceleration.y*Time.deltaTime*50,0,0);
 
         //rotate sides
         camera1.transform.Rotate(0,0,0);

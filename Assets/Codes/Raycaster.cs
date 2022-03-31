@@ -9,6 +9,7 @@ public class Raycaster : MonoBehaviour
     public GameObject crosshair;
     float counter=2;
     public FPSWalk fpswalk;
+    
     // Start is called before the first frame update
     void Start()
     {
